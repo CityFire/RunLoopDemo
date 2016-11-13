@@ -13,6 +13,8 @@
 		041F88E21DD824E20079F817 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F88E01DD824E20079F817 /* Main.storyboard */; };
 		041F88E41DD824E20079F817 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 041F88E31DD824E20079F817 /* Assets.xcassets */; };
 		041F88E71DD824E20079F817 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 041F88E51DD824E20079F817 /* LaunchScreen.storyboard */; };
+		041F88F01DD827460079F817 /* CFMonitorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 041F88EF1DD827460079F817 /* CFMonitorHelper.m */; };
+		041F88F21DD8302D0079F817 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041F88F11DD8302D0079F817 /* CrashReporter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		041F88E31DD824E20079F817 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		041F88E61DD824E20079F817 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		041F88E81DD824E30079F817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		041F88EE1DD827460079F817 /* CFMonitorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFMonitorHelper.h; sourceTree = "<group>"; };
+		041F88EF1DD827460079F817 /* CFMonitorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFMonitorHelper.m; sourceTree = "<group>"; };
+		041F88F11DD8302D0079F817 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041F88F21DD8302D0079F817 /* CrashReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +64,11 @@
 		041F88D61DD824E20079F817 /* RunLoopDemo */ = {
 			isa = PBXGroup;
 			children = (
+				041F88F11DD8302D0079F817 /* CrashReporter.framework */,
 				041F88DA1DD824E20079F817 /* AppDelegate.h */,
 				041F88DB1DD824E20079F817 /* AppDelegate.m */,
+				041F88EE1DD827460079F817 /* CFMonitorHelper.h */,
+				041F88EF1DD827460079F817 /* CFMonitorHelper.m */,
 				041F88DD1DD824E20079F817 /* ViewController.h */,
 				041F88DE1DD824E20079F817 /* ViewController.m */,
 				041F88E01DD824E20079F817 /* Main.storyboard */,
@@ -151,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				041F88DF1DD824E20079F817 /* ViewController.m in Sources */,
+				041F88F01DD827460079F817 /* CFMonitorHelper.m in Sources */,
 				041F88DC1DD824E20079F817 /* AppDelegate.m in Sources */,
 				041F88D91DD824E20079F817 /* main.m in Sources */,
 			);
@@ -272,6 +282,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RunLoopDemo",
+				);
 				INFOPLIST_FILE = RunLoopDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CityFire.RunLoopDemo;
@@ -283,6 +297,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RunLoopDemo",
+				);
 				INFOPLIST_FILE = RunLoopDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CityFire.RunLoopDemo;
